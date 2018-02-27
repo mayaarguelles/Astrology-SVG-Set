@@ -1,0 +1,223 @@
+@import url("https://use.typekit.net/sck7iea.css");
+
+body, html {
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-family: 'roboto', sans-serif;
+    color: #575657;
+}
+
+h1, h2, h3, h4 {
+    font-weight: normal;
+    font-family: 'tinos', serif;
+} h5, h6 {
+    font-weight: normal;
+    font-family: 'roboto-mono', monospace;
+    text-transform: uppercase;
+} h1 {
+    font-size: 36px;
+} p {
+    font-family: 'roboto', sans-serif;
+    font-size: 14px;
+    color: #575657;
+    line-height: 1.2;
+} a, a:visited, a:active {
+    color: #575657;
+} a:hover {
+    color: black;
+}
+
+svg {
+    fill: currentcolor;
+} .showcase svg {
+    width: auto;
+    max-width: 6em;
+    height: auto;
+    max-height: 6em;
+    animation: showcase 30s linear infinite;
+} p>svg {
+    width: auto;
+    max-width: 1em;
+    height: auto;
+    max-height: 1em;
+    position: relative;
+}
+
+
+.landing {
+    overflow: hidden;
+    height: 96vh;
+    width: 100vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+} .landing p {
+    width: 400px;
+}
+
+.accents {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: wiggle 2s infinite;
+} .accents * {
+}
+
+#asteroid {
+    width: 20%;
+    position: absolute;
+    left: 10%;
+    bottom: -5%;
+    animation-duration: 3.4s;
+} #moon {
+    width: 20%;
+    position: absolute;
+    right: 5%;
+    bottom: 40%;
+    animation-duration: 1.2s;
+} #geode {
+    width: 15%;
+    position: absolute;
+    right: 20%;
+    bottom: 10%;
+} @keyframes wiggle {
+    0%, 40%, 100% {
+        transform: translateX(0)
+    } 20%, 80% {
+        transform: translateX(2px);
+    } 60% {
+        transform: translateY(1px) translateX(-1px);
+    }
+}
+
+.background {
+    background: #fbfbfb;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -10000000000000000;
+    perspective: 400px;
+} .gridbg {
+    z-index: -10;
+    background: url('../img/grid.png');
+    position: absolute;
+    bottom: 50%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: rotateX(-65deg);
+    transform-origin: center bottom;
+    animation: grid 8s linear infinite;
+    border-bottom: 1px solid #eeeeee;
+} .gridbotbg {
+    z-index: -10;
+    background: url('../img/grid.png');
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: rotateX(65deg);
+    transform-origin: center top;
+    animation: gridbot 8s linear infinite;
+    border-top: 1px solid #eeeeee;
+} @keyframes grid {
+    from {
+        background-position: left 0;
+    } to {
+        background-position: left -80px;
+    }
+} @keyframes gridbot {
+    from {
+        background-position: left 0;
+    } to {
+        background-position: left 80px;
+    }
+}
+
+.scroll-suggest {
+    position: fixed;
+    bottom: -4px;
+    left: 50vw;
+    transform: translateY(-50%);
+}
+
+.showcase {
+    background: #141414;
+    color: #fbfbfb;
+    width: 300%;
+    height: 16em;
+    margin: 0;
+    padding: 0;
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+} .showcase:before {
+    content: 'The Signs';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    transform: translateY(-8em);
+    font-weight: normal;
+    font-size: 12px;
+    font-family: 'roboto-mono', monospace;
+    text-transform: uppercase;
+    text-align: center;
+} @keyframes showcase {
+    from {
+        transform: translateX(0);
+    } to {
+        transform: translateX(-150vw);
+    }
+}
+
+.individuals {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+} .individual {
+    width: 55%;
+    padding: 48px 24px;
+    border: 1px solid #141414;
+    background: #fbfbfb;
+    display: flex;
+    flex-direction: row-reverse;
+    align-self: flex-end;
+    margin-top: 48px;
+} .individual:nth-of-type(2n) {
+    flex-direction: row;
+    align-self: flex-start;
+} .individual>svg {
+    fill: #141414;
+    width: auto;
+    max-width: 12em;
+    height: auto;
+    max-height: 12em;
+    margin-right: 48px;
+    margin-left: 48px;
+} h5>svg {
+    width: auto;
+    max-width: 1em;
+    height: auto;
+    max-height: 1em;
+    margin-right: 1em;
+}
+
+.spacer {
+    height: 30vh;
+}
