@@ -7,6 +7,7 @@ body, html {
     padding: 0 !important;
     font-family: 'roboto', sans-serif;
     color: #575657;
+    overflow-x: hidden;
 }
 
 h1, h2, h3, h4 {
